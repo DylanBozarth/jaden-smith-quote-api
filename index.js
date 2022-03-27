@@ -9,7 +9,7 @@ const headers = {
 
 
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000
 
 app.get('/quote', (req, res) => {
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
