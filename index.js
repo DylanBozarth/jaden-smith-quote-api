@@ -11,12 +11,14 @@ const headers = {
 const app = express()
 const port = 4000
 
-app.get('/', (req, res) => {
-  res.send('test')
-  //const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  //res.send(quote)
+app.get('/quote', (req, res) => {
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  res.send(quote)
 })
-
+app.get('/', (req, res) => {
+    res.send('hello')
+  })
+  
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
