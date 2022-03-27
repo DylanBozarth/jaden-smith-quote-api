@@ -1,4 +1,5 @@
 const quotes = require("./quotes.json");
+const express = require('express');
 
 const headers = {
     "Access-Control-Allow-Origin": "*",
@@ -7,7 +8,6 @@ const headers = {
 };
 
 
-const express = require('express')
 const app = express()
 const port = 4000
 
