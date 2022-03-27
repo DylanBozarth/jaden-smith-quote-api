@@ -12,9 +12,9 @@ const app = express()
 const port = 4000
 
 app.get('/', (req, res) => {
-  
-  const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  res.send(quote)
+  res.send('test')
+  //const quote = quotes[Math.floor(Math.random() * quotes.length)];
+  //res.send(quote)
 })
 
 app.listen(port, () => {
